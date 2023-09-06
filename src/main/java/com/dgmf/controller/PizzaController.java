@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 // @Component("pizzaController")
 @Component
 public class PizzaController {
+    @Autowired // Field injection
     private PizzaService pizzaService;
 
     /* @Autowired // Constructor injection
@@ -14,10 +15,10 @@ public class PizzaController {
         this.pizzaService = pizzaService;
     } */
 
-    @Autowired // Setter injection
+    /* @Autowired // Setter injection
     public void setPizzaService(PizzaService pizzaService) {
         this.pizzaService = pizzaService;
-    }
+    } */
 
     public String getPizza() {
         return pizzaService.getPizza();
