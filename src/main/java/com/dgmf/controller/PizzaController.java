@@ -9,8 +9,13 @@ import org.springframework.stereotype.Component;
 public class PizzaController {
     private PizzaService pizzaService;
 
-    @Autowired // Constructor injection
+    /* @Autowired // Constructor injection
     public PizzaController(PizzaService pizzaService) {
+        this.pizzaService = pizzaService;
+    } */
+
+    @Autowired // Setter injection
+    public void setPizzaService(PizzaService pizzaService) {
         this.pizzaService = pizzaService;
     }
 
