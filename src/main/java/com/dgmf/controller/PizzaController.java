@@ -26,7 +26,8 @@ public class PizzaController {
 
     @Autowired // Constructor injection
     // public PizzaController(@Qualifier("vegPizza") IPizza iPizza) {
-    public PizzaController(@Qualifier("nonVegPizza") IPizza iPizza) {
+    // public PizzaController(@Qualifier("nonVegPizza") IPizza iPizza) {
+    public PizzaController(IPizza iPizza) {
         this.iPizza = iPizza;
     }
 
