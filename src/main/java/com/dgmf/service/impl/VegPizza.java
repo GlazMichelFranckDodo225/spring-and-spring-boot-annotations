@@ -5,7 +5,7 @@ import com.dgmf.service.PizzaService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service // Specific "@Component" annotation
+// @Service // Specific "@Component" annotation
 // @Primary
 public class VegPizza implements IPizza {
     @Override
