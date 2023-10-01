@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // @Component("pizzaController")
-@Component
+// @Component
 public class PizzaController {
     // @Autowired // Field injection
     // private PizzaService pizzaService;
@@ -24,7 +24,7 @@ public class PizzaController {
     private IPizza iPizza;
 
 
-    @Autowired // Constructor injection
+    // @Autowired // Constructor injection
     // public PizzaController(@Qualifier("vegPizza") IPizza iPizza) {
     // public PizzaController(@Qualifier("nonVegPizza") IPizza iPizza) {
     public PizzaController(IPizza iPizza) {
