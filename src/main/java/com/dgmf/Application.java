@@ -1,6 +1,11 @@
 package com.dgmf;
 
+import com.dgmf.controller.MyController;
 import com.dgmf.controller.PizzaController;
+import com.dgmf.repository.MyIRepository;
+import com.dgmf.repository.impl.MyIRepositoryImpl;
+import com.dgmf.service.MyIService;
+import com.dgmf.service.impl.MyIServiceImpl;
 import com.dgmf.service.impl.NonVegPizza;
 import com.dgmf.service.impl.VegPizza;
 import org.springframework.boot.SpringApplication;
@@ -33,11 +38,20 @@ public class Application {
 		System.out.println(vegPizza.getPizza());
 		System.out.println(nonVegPizza.getPizza());*/
 
-		PizzaController pizzaController =
+		/*PizzaController pizzaController =
 				(PizzaController) context.getBean("pizzaController");
 
 		System.out.println(pizzaController);
-		System.out.println(pizzaController.getPizza());
+		System.out.println(pizzaController.getPizza());*/
+
+		MyController myController = context.getBean(MyController.class);
+		System.out.println(myController.hello());
+
+		MyIService myIService = context.getBean(MyIServiceImpl.class);
+		System.out.println(myIService.hello());
+
+		MyIRepository myIRepository = context.getBean(MyIRepositoryImpl.class);
+		System.out.println(myIRepository.hello());
 	}
 
 }
