@@ -35,4 +35,12 @@ public class PizzaController {
         // return pizzaService.getPizza();
         return iPizza.getPizza();
     }
+
+    public void init() {
+        System.out.println("Initialization Logic");
+    }
+
+    public void destroy() {
+        System.out.println("Destruction Logic");
+    }
 }
