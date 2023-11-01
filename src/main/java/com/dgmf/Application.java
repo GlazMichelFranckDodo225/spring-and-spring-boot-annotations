@@ -5,6 +5,8 @@ import com.dgmf.controller.PizzaController;
 import com.dgmf.lazy.LazyLoader;
 import com.dgmf.repository.MyIRepository;
 import com.dgmf.repository.impl.MyIRepositoryImpl;
+import com.dgmf.scope.PrototypeBean;
+import com.dgmf.scope.SingletonBean;
 import com.dgmf.service.MyIService;
 import com.dgmf.service.impl.MyIServiceImpl;
 import com.dgmf.service.impl.NonVegPizza;
@@ -18,16 +20,21 @@ public class Application {
 	public static void main(String[] args) {
 		var context = SpringApplication.run(Application.class, args);
 
-		MyController myController = context.getBean(MyController.class);
-		System.out.println(myController.hello());
+		// SingletonBean Class uses Singleton Scope
+		SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
+		System.out.println(singletonBean1.hashCode());
+		SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
+		System.out.println(singletonBean2.hashCode());
+		SingletonBean singletonBean3 = context.getBean(SingletonBean.class);
+		System.out.println(singletonBean3.hashCode());
 
-		MyIService myIService = context.getBean(MyIServiceImpl.class);
-		System.out.println(myIService.hello());
-
-		MyIRepository myIRepository = context.getBean(MyIRepositoryImpl.class);
-		System.out.println(myIRepository.hello());
-
-		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
+		// PrototypeBean Class uses Prototype Scope
+		PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean1.hashCode());
+		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean2.hashCode());
+		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean3.hashCode());
 	}
 
 }
