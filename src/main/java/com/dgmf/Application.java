@@ -31,6 +31,9 @@ public class Application {
 		// @Value Annotation
 		ValueAnnotation valueAnnotation = context.getBean(ValueAnnotation.class);
 		System.out.println(valueAnnotation.getDefaultName());
+		System.out.println(valueAnnotation.getHost());
+		System.out.println(valueAnnotation.getEmail());
+		System.out.println(valueAnnotation.getPassword());
 	}
 
 }
