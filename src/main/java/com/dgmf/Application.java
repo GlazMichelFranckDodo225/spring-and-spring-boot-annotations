@@ -1,16 +1,8 @@
 package com.dgmf;
 
-import com.dgmf.controller.MyController;
-import com.dgmf.controller.PizzaController;
-import com.dgmf.lazy.LazyLoader;
-import com.dgmf.repository.MyIRepository;
-import com.dgmf.repository.impl.MyIRepositoryImpl;
-import com.dgmf.scope.PrototypeBean;
-import com.dgmf.scope.SingletonBean;
-import com.dgmf.service.MyIService;
-import com.dgmf.service.impl.MyIServiceImpl;
-import com.dgmf.service.impl.NonVegPizza;
-import com.dgmf.service.impl.VegPizza;
+import com.dgmf.atscopeannotattion.PrototypeBean;
+import com.dgmf.atscopeannotattion.SingletonBean;
+import com.dgmf.atvalueannotation.ValueAnnotation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -35,6 +27,10 @@ public class Application {
 		System.out.println(prototypeBean2.hashCode());
 		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
 		System.out.println(prototypeBean3.hashCode());
+
+		// @Value Annotation
+		ValueAnnotation valueAnnotation = context.getBean(ValueAnnotation.class);
+		System.out.println(valueAnnotation.getDefaultName());
 	}
 
 }

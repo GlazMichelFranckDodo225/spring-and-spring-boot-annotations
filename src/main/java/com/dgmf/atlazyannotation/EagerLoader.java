@@ -1,4 +1,4 @@
-package com.dgmf.lazy;
+package com.dgmf.atlazyannotation;
 
 import org.springframework.stereotype.Component;
 
