@@ -34,6 +34,8 @@ public class Application {
 		System.out.println(valueAnnotation.getHost());
 		System.out.println(valueAnnotation.getEmail());
 		System.out.println(valueAnnotation.getPassword());
+		System.out.println(valueAnnotation.getJavaHome());
+		// System.out.println(valueAnnotation.getHomeDir());
 	}
 
 }

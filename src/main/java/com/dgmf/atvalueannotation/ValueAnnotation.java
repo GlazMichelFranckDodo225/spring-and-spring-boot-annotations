@@ -13,6 +13,8 @@ public class ValueAnnotation {
     private String email;
     @Value("${mail.password}")
     private String password;
+    @Value("${java.home}")
+    private String javaHome;
 
     public String getDefaultName() {
         return defaultName;
@@ -29,4 +31,9 @@ public class ValueAnnotation {
     public String getPassword() {
         return password;
     }
+
+    public String getJavaHome() {
+        return javaHome;
+    }
+
 }
