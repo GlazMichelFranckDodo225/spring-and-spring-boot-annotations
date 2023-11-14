@@ -16,5 +16,7 @@ public class PropertySourceClient {
         System.out.println(propertySourceClass.getHost());
         System.out.println(propertySourceClass.getEmail());
         System.out.println(propertySourceClass.getPassword());
+        System.out.println(propertySourceClass.getName());
+        System.out.println(propertySourceClass.getDescription());
     }
 }

@@ -11,6 +11,10 @@ public class PropertySourceClass {
     private String email;
     @Value("${gmail.password}")
     private String password;
+    @Value("${app.name}")
+    private String name;
+    @Value("${app.description}")
+    private String description;
 
     public String getHost() {
         return host;
@@ -22,5 +26,13 @@ public class PropertySourceClass {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

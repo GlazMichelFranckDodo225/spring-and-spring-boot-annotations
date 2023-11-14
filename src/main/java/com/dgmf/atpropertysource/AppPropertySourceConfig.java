@@ -6,6 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:mail.properties")
+@PropertySource("classpath:messages.properties")
 @ComponentScan("com.dgmf.atpropertysource")
 public class AppPropertySourceConfig {
 
