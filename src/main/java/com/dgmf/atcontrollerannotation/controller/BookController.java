@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller // Specialization of "@Component" Annotation
 public class BookController {
     // Handler Method
-    @RequestMapping("/hello") // Map the incoming HTTP Request
+    @RequestMapping("/hello-book") // Map the incoming HTTP Request
     // to this Method
     @ResponseBody // To convert into Json format the returned
     // Response to the Client
     public String hello() {
-        return "Hello world !";
+        return "Hello Book !";
     }
 
     // Handler Method
