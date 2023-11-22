@@ -18,7 +18,11 @@ public class EmployeeController {
     }
 
     // Handler Method
-    @RequestMapping("/employee") // Map the incoming HTTP Request
+    // @RequestMapping("/employee") // Map the incoming HTTP Request
+    // Map the incoming HTTP Requests
+    @RequestMapping(value = {
+            "/employee", "/admin", "/user"
+    }) 
     public Employee getEmployee() {
         Employee employee = new Employee(
                 1L,
