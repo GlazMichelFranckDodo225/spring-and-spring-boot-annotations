@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySources;
 @ComponentScan("com.dgmf.atpropertysource")
 // @PropertySource("classpath:mail.properties")
 // @PropertySource("classpath:messages.properties")
-@PropertySources({
+@PropertySources({ // To provide multiple Properties at once
         @PropertySource("classpath:mail.properties"),
         @PropertySource("classpath:messages.properties")
 })
