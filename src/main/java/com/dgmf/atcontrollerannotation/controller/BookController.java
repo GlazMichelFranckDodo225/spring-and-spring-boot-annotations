@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-// To make this Spring MVC Controller to
+// To make this Class a Spring MVC Controller to
 // handle incoming HTTP Requests
 @Controller // Specialization of "@Component" Annotation
 public class BookController {
