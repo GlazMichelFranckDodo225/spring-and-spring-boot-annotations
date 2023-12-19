@@ -1,4 +1,4 @@
-package com.dgmf.atrestcontrollerannotation.entity;
+package com.dgmf.annotations.atrestcontroller.entity;
 
 public class Car {
     private Long id;

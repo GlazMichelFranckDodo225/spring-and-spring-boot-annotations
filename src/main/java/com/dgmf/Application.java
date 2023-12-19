@@ -1,8 +1,8 @@
 package com.dgmf;
 
-import com.dgmf.atscopeannotattion.PrototypeBean;
-import com.dgmf.atscopeannotattion.SingletonBean;
-import com.dgmf.atvalueannotation.ValueAnnotation;
+import com.dgmf.annotations.atscope.PrototypeBean;
+import com.dgmf.annotations.atscope.SingletonBean;
+import com.dgmf.annotations.atvalue.ValueAnnotation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

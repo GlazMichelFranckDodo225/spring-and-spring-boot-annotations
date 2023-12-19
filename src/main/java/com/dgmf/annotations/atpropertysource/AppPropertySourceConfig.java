@@ -1,4 +1,4 @@
-package com.dgmf.atpropertysource;
+package com.dgmf.annotations.atpropertysource;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

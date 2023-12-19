@@ -1,8 +1,7 @@
-package com.dgmf.atcontrollerannotation.controller;
+package com.dgmf.annotations.atcontroller.controller;
 
-import com.dgmf.atcontrollerannotation.entity.Book;
+import com.dgmf.annotations.atcontroller.entity.Book;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 

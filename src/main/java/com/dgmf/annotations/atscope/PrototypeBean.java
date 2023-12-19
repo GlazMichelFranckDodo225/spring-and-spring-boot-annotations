@@ -1,4 +1,4 @@
-package com.dgmf.atscopeannotattion;
+package com.dgmf.annotations.atscope;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;

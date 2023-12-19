@@ -1,4 +1,4 @@
-package com.dgmf.atrequestmappingannotation.entity;
+package com.dgmf.annotations.atrequestmapping.entity;
 
 public class Employee {
     private Long id;

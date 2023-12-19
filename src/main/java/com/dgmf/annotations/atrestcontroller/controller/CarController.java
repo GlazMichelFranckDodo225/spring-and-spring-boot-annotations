@@ -1,8 +1,7 @@
-package com.dgmf.atrestcontrollerannotation.controller;
+package com.dgmf.annotations.atrestcontroller.controller;
 
-import com.dgmf.atrestcontrollerannotation.entity.Car;
+import com.dgmf.annotations.atrestcontroller.entity.Car;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 // To make this Class a Spring MVC REST Controller to

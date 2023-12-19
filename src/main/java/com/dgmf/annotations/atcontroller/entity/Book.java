@@ -1,4 +1,4 @@
-package com.dgmf.atcontrollerannotation.entity;
+package com.dgmf.annotations.atcontroller.entity;
 
 public class Book {
     private Long id;

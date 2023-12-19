@@ -1,4 +1,4 @@
-package com.dgmf.atpropertysource;
+package com.dgmf.annotations.atpropertysource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

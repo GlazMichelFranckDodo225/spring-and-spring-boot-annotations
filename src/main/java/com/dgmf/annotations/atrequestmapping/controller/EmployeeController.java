@@ -1,8 +1,7 @@
-package com.dgmf.atrequestmappingannotation.controller;
+package com.dgmf.annotations.atrequestmapping.controller;
 
-import com.dgmf.atrequestmappingannotation.entity.Employee;
+import com.dgmf.annotations.atrequestmapping.entity.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 // To make this Class a Spring MVC REST Controller to
@@ -22,7 +21,7 @@ public class EmployeeController {
     // Map the incoming HTTP Requests
     @RequestMapping(value = {
             "/employee", "/admin", "/user"
-    }) 
+    })
     public Employee getEmployee() {
         Employee employee = new Employee(
                 1L,
