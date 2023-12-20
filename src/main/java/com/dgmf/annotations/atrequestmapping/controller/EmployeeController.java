@@ -2,26 +2,42 @@ package com.dgmf.annotations.atrequestmapping.controller;
 
 import com.dgmf.annotations.atrequestmapping.entity.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 // To make this Class a Spring MVC REST Controller to
 // handle incoming HTTP Requests
 @RestController // @Controller + @ResponseBody
-@RequestMapping("/api") // Map the incoming HTTP Request
+@RequestMapping("/api") // By default, Map the incoming
+// HTTP GET Request to this Method
 public class EmployeeController {
     // Handler Method
-    @RequestMapping("/hello-employee") // Map the incoming HTTP Request
-    // to this Method
+    // By default, Map the incoming HTTP GET Request to this Method
+    @RequestMapping(
+            value = "/hello-employee",
+            method = RequestMethod.GET // Can be Omitted ==> Default Method
+            /* method = RequestMethod.POST
+            method = RequestMethod.PUT
+            method = RequestMethod.DELETE
+            */
+    )
     public String hello() {
         return "Hello Employee !";
     }
 
     // Handler Method
-    // @RequestMapping("/employee") // Map the incoming HTTP Request
-    // Map the incoming HTTP Requests
-    @RequestMapping(value = {
+    // By default, Map the incoming HTTP GET Request to this Method
+    // @RequestMapping("/employee")
+    @RequestMapping(
+            value = {
             "/employee", "/admin", "/user"
-    })
+            },
+            method = RequestMethod.GET // Can be Omitted ==> Default Method
+            /* method = RequestMethod.POST
+            method = RequestMethod.PUT
+            method = RequestMethod.DELETE
+            */
+    )
     public Employee getEmployee() {
         Employee employee = new Employee(
                 1L,
