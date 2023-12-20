@@ -1,6 +1,7 @@
 package com.dgmf.annotations.atrequestmapping.controller;
 
 import com.dgmf.annotations.atrequestmapping.entity.Employee;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,7 +37,15 @@ public class EmployeeController {
             /* method = RequestMethod.POST
             method = RequestMethod.PUT
             method = RequestMethod.DELETE
-            */
+            */,
+            produces = { // Returned Types Required
+                    MediaType.APPLICATION_JSON_VALUE,
+                    MediaType.APPLICATION_ATOM_XML_VALUE
+            },
+            consumes = { // Incoming Types Required
+                    MediaType.APPLICATION_JSON_VALUE,
+                    MediaType.APPLICATION_ATOM_XML_VALUE
+            }
     )
     public Employee getEmployee() {
         Employee employee = new Employee(
